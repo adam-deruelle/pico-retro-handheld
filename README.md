@@ -13,7 +13,7 @@
 > Une console de jeu portable conçue de A à Z : la carte électronique sous Proteus, sa fabrication (tirage, perçage, soudure), un boîtier imprimé en 3D, puis trois jeux programmés en CircuitPython sur Raspberry Pi Pico.
 
 **Contexte :** projet universitaire (SAÉ 2), BUT GEII — IUT de Rennes, novembre 2024 – janvier 2025
-**Équipe :** Bouttier & Deruelle
+**Auteur :** Adam Deruelle
 **Stack :** Raspberry Pi Pico · CircuitPython 9 · écran TFT ST7735S 1,8″ (SPI) · Proteus
 
 ### Le sujet
@@ -37,7 +37,7 @@ Fichiers de conception dans [`cao/`](cao/) : projet Proteus (`console_retro.pdsp
 | Space Rescue | Gunfight | Christmas Pong |
 |---|---|---|
 | ![Écran titre de Space Rescue](docs/images/space-rescue.png) | ![Écran titre de Gunfight](docs/images/gunfight.png) | ![Écran titre de Christmas Pong](docs/images/christmas-pong.png) |
-| Premier jeu, réalisé en suivant le tutoriel de prise en main : affichage, déplacements, collisions, animation, boutons, joystick et bruitages. | Duel à deux joueurs inspiré de *Gun Fight* (Sega, 1969) et *Western Gun* (Taito, 1975). Quatre écrans : titre, règles, jeu, fin. | Hommage au *Pong* d'Atari (1972) dans une ambiance de Noël : match à deux joueurs, scores, collisions balle / raquettes. Quatre écrans : titre, règles, jeu, fin. |
+| Premier jeu, réalisé en suivant le tutoriel de prise en main : affichage, déplacements, collisions, animation, boutons, joystick et bruitages. Nécessite `Ressources_tutoriel.py` (module du cours, non inclus). | Duel à deux joueurs inspiré de *Gun Fight* (Sega, 1969) et *Western Gun* (Taito, 1975). Quatre écrans : titre, règles, jeu, fin. | Hommage au *Pong* d'Atari (1972) dans une ambiance de Noël : match à deux joueurs, scores, collisions balle / raquettes. Quatre écrans : titre, règles, jeu, fin. |
 
 Pour Gunfight et Christmas Pong, aucun code n'était fourni : chaque jeu a été écrit de A à Z à partir des règles et des ressources graphiques et sonores mises à disposition.
 
@@ -51,7 +51,7 @@ Pour Gunfight et Christmas Pong, aucun code n'était fourni : chaque jeu a été
 │   └── Christmas_pong/      code.py + images/ + audio/
 ├── cao/                     Projet Proteus, schéma d'implantation, nomenclature, routage
 ├── docs/images/             Captures utilisées dans ce README
-└── *.pdf                    Analyse fonctionnelle, carte mentale, sujets de la SAÉ
+└── *.pdf                    Analyse fonctionnelle et carte mentale
 ```
 
 ### Lancer un jeu
@@ -61,7 +61,7 @@ Pour Gunfight et Christmas Pong, aucun code n'était fourni : chaque jeu a été
 3. Copier le contenu du dossier du jeu choisi (`code.py`, `images/`, `audio/`) à la racine de `CIRCUITPY`.
 4. Le jeu démarre automatiquement.
 
-> ⚠️ Space Rescue a besoin du module `Ressources_tutoriel.py`, fourni avec le tutoriel et absent de ce dépôt.
+> ⚠️ Space Rescue nécessite le module `Ressources_tutoriel.py`. C'est un module du cours (fourni avec le tutoriel de la SAÉ) : il n'est pas inclus dans ce dépôt. Gunfight et Christmas Pong fonctionnent sans lui.
 
 ### Planning
 
@@ -71,7 +71,7 @@ Avant-projet et rétro-ingénierie, schéma fonctionnel sous Proteus, typon, imp
 
 ### Crédits
 
-- Conception de la carte, fabrication et code des jeux : Bouttier & Deruelle.
+- Conception de la carte, fabrication et code des jeux : Adam Deruelle.
 - Sujets, ressources graphiques et sonores, et modules `Ressources_*` / `Gestion_controles` : équipe pédagogique du département GEII de l'IUT de Rennes (Michaël Bottin).
 - Bibliothèques Adafruit CircuitPython (licence MIT).
 
@@ -85,7 +85,7 @@ Avant-projet et rétro-ingénierie, schéma fonctionnel sous Proteus, typon, imp
 > A handheld game console built from scratch: circuit board designed in Proteus, made in-house (printing, drilling, soldering), a 3D-printed case, then three games written in CircuitPython on a Raspberry Pi Pico.
 
 **Context:** university project (SAÉ 2), BUT GEII — IUT de Rennes, November 2024 – January 2025
-**Team:** Bouttier & Deruelle
+**Author:** Adam Deruelle
 **Stack:** Raspberry Pi Pico · CircuitPython 9 · 1.8″ ST7735S TFT screen (SPI) · Proteus
 
 ### The brief
@@ -109,7 +109,7 @@ Design files in [`cao/`](cao/): Proteus project (`console_retro.pdsprj`), compon
 | Space Rescue | Gunfight | Christmas Pong |
 |---|---|---|
 | ![Space Rescue title screen](docs/images/space-rescue.png) | ![Gunfight title screen](docs/images/gunfight.png) | ![Christmas Pong title screen](docs/images/christmas-pong.png) |
-| First game, built while following the getting-started tutorial: display, movement, collisions, animation, buttons, joystick and sound effects. | Two-player duel inspired by *Gun Fight* (Sega, 1969) and *Western Gun* (Taito, 1975). Four screens: title, rules, game, end. | A tribute to Atari's *Pong* (1972) with a Christmas theme: two-player match, scores, ball / paddle collisions. Four screens: title, rules, game, end. |
+| First game, built while following the getting-started tutorial: display, movement, collisions, animation, buttons, joystick and sound effects. Requires `Ressources_tutoriel.py` (course module, not included). | Two-player duel inspired by *Gun Fight* (Sega, 1969) and *Western Gun* (Taito, 1975). Four screens: title, rules, game, end. | A tribute to Atari's *Pong* (1972) with a Christmas theme: two-player match, scores, ball / paddle collisions. Four screens: title, rules, game, end. |
 
 For Gunfight and Christmas Pong, no code was provided: each game was written from scratch from the rules and the supplied graphics and sound assets.
 
@@ -120,11 +120,11 @@ For Gunfight and Christmas Pong, no code was provided: each game was written fro
 3. Copy the chosen game folder's content (`code.py`, `images/`, `audio/`) to the root of `CIRCUITPY`.
 4. The game starts automatically.
 
-> ⚠️ Space Rescue needs the `Ressources_tutoriel.py` module, supplied with the tutorial and missing from this repository.
+> ⚠️ Space Rescue requires the `Ressources_tutoriel.py` module. It is a course module (supplied with the SAÉ tutorial) and is not included in this repository. Gunfight and Christmas Pong run without it.
 
 ### Credits
 
-- Board design, manufacturing and game code: Bouttier & Deruelle.
+- Board design, manufacturing and game code: Adam Deruelle.
 - Briefs, graphics and sound assets, and the `Ressources_*` / `Gestion_controles` modules: GEII teaching staff, IUT de Rennes (Michaël Bottin).
 - Adafruit CircuitPython libraries (MIT licence).
 
